@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="icon" type="image/png" href="images/cdh.png" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="back2FutureTime.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Charles Dustin Hodges</h1>
+			<p>Portfolio and showcase of personal projects<span id="cursor"></span></p>
+		</div>
+		
+		<div class="topNav" id="myTopNav">
+			<a href="index.html">Home</a>
+			<a href="contact.html">Contact</a>
+			<a href="about.html">About</a>
+			<a href="javascript:void(0);" style="font-size: 15px;" class="icon" onclick="myFunction()">&#9776;</a> <!-- &#9776; (hamburger icon) -->
+		</div>
+		
+		<div id="contact_me">
+			<div id="sect_contact">
+				<p>
+					To leave me a message or ask questions type in your name, email address, leave your comment in the message section and choose your option from the drop-down menu.
+					<br><br>You may also contact me through my <a href="https://www.linkedin.com/in/charles-dustin-hodges/" target="_blank">LinkedIn</a> account.
+				</p>
+			
+			</div> <!-- End of sect_contact -->
+			
+		</div> <!-- End of contact_me -->
+		
+		<div id="form">
+			<div id="section1">
+				<div id="contact">
+					<form id="contact_form" action="mailto:cdhodges022018@gmail.com?subject=email from Portfolio site" method="post" enctype="text/plain">
+						<div class="row">
+							<label for="name">Your name:</label><br />
+							<input id="name" class="input" name="name" type="text" value="" size="40" /><br />
+						</div> <!-- End of contact_form -->
+			
+						<div class="row">
+							<label for="email">Your email:</label><br />
+							<input id="email" class="input" name="email" type="text" value="" size="40" /><br />
+						</div> <!-- End of row -->
+			
+						<div class="row">
+							<label for="message">Your message:</label><br />
+							<textarea id="message" class="input" name="message" rows="7" cols="36"></textarea><br />
+						</div> <!-- End of row -->
+			
+						<input id="submit_button" type="submit" value="Submit" />
+						
+						<select class="w4-select" name="option">
+							<option value="" disabled selected>Choose your option</option>
+							<option value="Hello">Hello</option>
+							<option value="Recruiter">Recruiter</option>
+							<option value="Employment">Employment Opportunity</option>
+							<option value="Other">Other</option>
+						</select>
+					</form>
+			
+				</div> <!-- End of contact -->
+			
+			</div> <!-- End of section1 -->
+			
+		</div> <!-- End of form -->
+		
+		<div class="footer">
+			<div id="footsy">
+				<h3>Charles Dustin Hodges</h3>
+				<p>Last Updated: 08/16/2017</p>
+			</div>
+		</div>
+		
+		<script src="mySite.js"></script>
+	</body>
+</html>

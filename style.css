@@ -1,0 +1,880 @@
+* {
+	font-family: emulogic;
+	margin: 0px;
+	padding: 0px;
+	background-color: #303030;
+}
+
+body {
+	height: 100%;
+}
+
+@font-face {
+	font-family: 'emulogic';
+	src: url("fonts/emulogic.ttf");
+	
+	/* Note: Firefox requires that the font file be
+	 * in the same folder as the CSS file. I've added
+	 * the font family .ttf file in both the file labelled
+	 * fonts as well as in the botBattle file with the CSS.
+	 */
+}
+@font-face {
+	font-family: 'digital-clock-font';
+	src: url('fonts/digital-7/digital-7.ttf');
+}
+
+/* ------------------------------------------ header <div> ------------------------------------------ */
+
+#header {
+	background-color: #000000;
+	border: 2px solid #000000;
+}
+
+#header  h1 {
+	text-align: center;
+	color: #FF8C00;
+	margin: 15px auto;
+	background-color: #000000;
+}
+
+#header p {
+	text-align: center;
+	color: #00FF00;
+	margin: 15px auto;
+	font-size: 14px;
+	background-color: #000000;
+	-webkit-animation: type 4s steps(43);
+	animation: type 4s steps(43);	/* Steps amount of characters in header paragraph */
+	overflow: hidden;
+	white-space: nowrap;	/* Do not have text wrap */
+}
+
+@media screen and (max-width: 600px) {
+	#header p {
+		max-width: 99%;
+		font-size: 0.5em;
+		text-align: center;
+		-webkit-animation: type 4s steps(43);
+		animation: type 4s steps(43);
+	}
+}
+
+#cursor {
+	margin-left: 3px;
+	animation: blinker 1s linear infinite;
+	border-right: 4px solid lime;	/* Creating out text cursor */
+}
+
+@keyframes type {
+	0% {
+		width: 0ch;					/* Starting at character 0 */
+	}
+	100% {
+		width: 43ch;				/* Ending at character 98 */
+	}
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+/* ------------------------------------------ time-clocks ------------------------------------------- */
+
+.time-clocks {
+	height: 70px;
+	background-color: #303030;
+}
+
+#past {
+	float: left;
+	width: 270px;
+	height: 56px;
+	margin-left: 512px;
+	margin-top: 20px;
+	border: 2px solid #000;
+	background-color: #282828;
+}
+
+#present {
+	float: left;
+	width: 270px;
+	height: 56px;
+	margin-left: 20px;
+	margin-top: 20px;
+	border: 2px solid #000;
+	background-color: #282828;
+}
+
+#lastTime {
+	float: left;
+	width: 270px;
+	height: 56px;
+	margin-left: 20px;
+	margin-top: 20px;
+	border: 2px solid #000;
+	background-color: #282828;
+}
+
+.top-labels div{
+	float: left;
+	background-color: #282828;
+}
+
+.top-labels div p{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 8px;
+	margin-top: 1.5px;
+	margin-bottom: 2px;
+	padding: 0.5px 4px;
+	color: #808080;
+	background-color: #580000;
+}
+
+.monthLabel p {
+	font-family: Verdana, Geneva, sans-serif;
+	margin-left: 13px;
+	border: 1px solid #000;
+}
+
+.dayLabel p {
+	font-family: Verdana, Geneva, sans-serif;
+	margin-left: 12px;
+	border: 1px solid #000;
+}
+
+.yearLabel p {
+	font-family: Verdana, Geneva, sans-serif;
+	margin-left: 29px;
+	border: 1px solid #000;
+}
+
+.hourLabel p {
+	font-family: Verdana, Geneva, sans-serif;
+	margin-left: 27px;
+	border: 1px solid #000;
+}
+
+.minuteLabel p {
+	font-family: Verdana, Geneva, sans-serif;
+	margin-left: 10px;
+	border: 1px solid #000;
+}
+
+.dateTime div {
+	float: left;
+}
+
+#monthSpan, #daySpan, #yearSpan, #hourSpan, #minuteSpan {
+	text-align: center;
+	font-size: 20px;
+	color: #FF4500;
+	font-family: 'digital-clock-font';
+	background-color: #181818;
+}
+
+#presentMonthSpan, #presentDaySpan, #presentYearSpan, #presentHourSpan, #presentMinuteSpan {
+	text-align: center;
+	font-size: 20px;
+	color: lime;
+	font-family: 'digital-clock-font';
+	background-color: #181818;
+}
+
+#lastMonthSpan, #lastDaySpan, #lastYearSpan, #lastHourSpan, #lastMinuteSpan {
+	text-align: center;
+	font-size: 20px;
+	color: yellow;
+	font-family: 'digital-clock-font';
+	background-color: #181818;
+}
+
+.month {
+	width: 40px;
+	height: 17px;
+	background-color: #181818;
+	border: 2px solid #000;
+	display: block;
+	margin: 0px 5px 30px 12px;
+}
+
+.day {
+	width: 40px;
+	height: 17px;
+	background-color: #181818;
+	border: 2px solid #000;
+	display: block;
+	margin: 0px 0px 30px 2px;
+}
+
+.year {
+	width: 40px;
+	height: 17px;
+	background-color: #181818;
+	border: 2px solid #000;
+	display: block;
+	margin: 0px 0px 30px 8px;
+}
+
+.hours {
+	width: 20px;
+	height: 17px;
+	background-color: #181818;
+	border: 2px solid #000;
+	display: block;
+	margin: 0px 0px 30px 4px;
+}
+
+.minutes {
+	width: 20px;
+	height: 17px;
+	background-color: #181818;
+	border: 2px solid #000;
+	display: block;
+	margin: 0px 0px 30px 1px;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 15px;
+	height: 22px;
+}
+
+.am p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 6px;
+	float: left;
+	border: 1px solid #000;
+	color: #808080;
+	background-color: #580000;
+	margin-left: 2px;
+	margin-bottom: -3px;
+	padding: 0px 1px;
+}
+
+.amLight {
+	font-family: Verdana, Geneva, sans-serif;
+	display: none;
+	line-height: 2px;
+	font-size: 20px;
+	color: #FFFF66;
+	text-align: center;
+	margin-left: 2px;
+	margin-bottom: .5px;
+}
+
+.pm {
+	background-color: #282828;
+}
+
+.pm p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 6px;
+	float: left;
+	clear: left;
+	border: 1px solid #000;
+	color: #808080;
+	background-color: #580000;
+	margin-top: 8px;
+	margin-left: 2px;
+	margin-bottom: -5px;
+	padding: 0px 1px;
+}
+
+.pmLight {
+	font-family: Verdana, Geneva, sans-serif;
+	display: none;
+	line-height: 2px;
+	font-size: 20px;
+	color: #FFFF66;
+	text-align: center;
+	margin-left: 2px;
+	margin-top: -1.5px;
+}
+
+.blinkingLights{
+	margin: 0 auto;
+	width: 15px;
+	height: 22px;
+	background-color: #282828;
+}
+
+.blinkSecs {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	line-height: 5px;
+	color: #FFFF66;
+	margin: -2px 0px 5px 5px;
+	background-color: #282828;
+    animation-duration: 1s;
+    animation-name: blinkSecs;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2, start);
+}
+@keyframes blinkSecs {
+    80% {
+        visibility: hidden;
+    }
+}
+
+.bottomLabel {
+	float: left;
+	width: 125px;
+	height: 13px;
+	display: block;
+	margin-top: -24px;
+	margin-left: 72px;
+	color: #808080;
+	background-color: #000;
+}
+
+.destinationLabel p {
+	font-family: Verdana, Geneva, sans-serif;
+	float: left;
+	font-size: 10px;
+	width: 125px;
+	height: 12px;
+	text-align: center;
+	background-color: black;
+}
+
+#destinationAMLight {
+	font-family: Verdana, Geneva, sans-serif;
+	display: block;
+	line-height: 2px;
+	font-size: 20px;
+	color: #FFFF66;
+	text-align: center;
+	margin-left: 2px;
+	margin-bottom: .5px;
+}
+
+@media screen and (max-width: 1500px) {
+
+	.time-clocks {
+		height: 240px;
+		width: 400px;
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 20px;
+	}
+	
+	#past, #present, #lastTime {
+		margin-left: 30px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.time-clocks {
+		height: 230px;
+	}
+}
+
+/* ------------------------------------------ topNav <div> ------------------------------------------ */
+
+.topNav {
+	overflow: hidden;
+	background-color: #303030;
+}
+
+.topNav a {
+	float: left;
+	margin: 0 auto;
+	display: block;
+	color: #98FB98;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	background-color: #202020;
+}
+
+.topNav a:hover {
+	background-color: #303030;
+	color: lime;
+}
+
+.topNav .icon {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.topNav a:not(:first-child) {display: none;}
+	.topNav a.icon {
+		float: right;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.topNav.responsive {position: relative;}
+	.topNav.responsive.icon {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+	.topNav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}
+
+#myTopNav {
+	border: 2px solid #000000;
+	background-color: #202020;
+}
+
+/* ------------------------------------- section <div> --------------------------------------- */
+
+.section {
+	width: 85%; 
+	height: 33%;
+	margin: 40px auto 60px auto;
+	display: block;
+	background-color: #202020;
+	border: 2px solid #000000;
+	box-shadow: 15px 15px 10px #000000;
+}
+
+.section h2 {
+	text-align: center;
+	color: lime;
+	padding-top: 20px;
+	margin-bottom: 20px;
+	background-color: #202020;
+}
+
+/* -------------------------------------- .myImage ------------------------------------------- */
+
+.myImage img {
+	max-width: 65%;
+	max-height: 45%;
+	border: 2px solid #1E90FF;
+	box-shadow: 15px 15px 10px #000000;
+}
+
+/* ------------------------------------- github <div> --------------------------------------- */
+
+#github {
+	margin: 20px auto;
+	background-color: #202020;
+}
+
+#github a {
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	color: #FF8C00;
+	background-color: #202020;
+}
+
+#github a:hover {
+	color: #1E90FF;
+}
+
+#github p {
+	background-color: #202020;
+	text-align: center;
+	display: block;
+	margin: 15px auto;
+	color: lime;
+}
+
+#github h5 {
+	color: lime;
+	background-color: #202020;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
+
+#github h4 a {
+	margin: 50px auto;
+}
+
+#github p a {
+	background-color: #202020;
+	color: lime;
+}
+
+#github p a:hover{
+	color: #1E90FF;
+}
+
+#github #github-section {
+	color: #1E90FF;
+	display: block;
+	margin: 30px auto;
+	width: 45%;
+	background-color: #202020;
+}
+
+#github iframe {
+	display: block;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+	#github {
+		width: 99%;
+	}
+	
+	#github h4 {
+		font-size: 12px;
+	}
+	
+	#github p {
+		font-size: 11px;
+	}
+	
+	#github iframe {
+		width: 100%;
+	}
+}
+
+/* ------------------------------------- jsfiddle <div> ------------------------------------- */
+
+#jsfiddle {
+	margin: 20px auto;
+	background-color: #202020;
+}
+
+#jsfiddle h4 {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#jsfiddle a {
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	color: #FF8C00;
+	background-color: #202020;
+}
+
+#jsfiddle a:hover {
+	color: #1E90FF;
+}
+
+#jsfiddle p {
+	background-color: #202020;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	color: #FF8C00;
+}
+
+#jsfiddle p a {
+	background-color: #202020;
+	color: lime;
+}
+
+#jsfiddle p a:hover{
+	color: #1E90FF;
+}
+
+#jsfiddle iframe {
+	margin: 0 auto;
+	border: 2px solid #1E90FF;
+	display: block;
+}
+
+@media screen and (max-width: 600px) {
+	#jsfiddle {
+		width: 99%;
+	}
+	
+	#jsfiddle iframe {
+		display: none;
+	}
+	
+	#jsfiddle p {
+		font-size: 11px;
+	}
+	
+	#jsfiddle a {
+		font-size: 11px;
+	}
+	
+	#botBattle img {
+	width: 93%;
+	height: 30%;
+	}
+
+	#stupidAI img {
+		width: 93%;
+		height: 30%;
+	}
+}
+
+/* ------------------------------------------ pages <div> ------------------------------------------ */
+
+#pages {
+	text-align: center;
+	display: flex; /* equal height of the children */
+	margin: 20px auto;
+	width: 98%;
+	background-color: #202020;
+}
+
+#pages h4 {
+	background-color: #202020;
+}
+
+#pages a {
+	text-decoration: none;
+	text-align: center;
+	color: #FF8C00;
+	margin-bottom: 20px;
+	background-color: #202020;
+}
+
+#pages a:hover {
+	color: #1E90FF;
+}
+
+#pages p {
+	background-color: #202020;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	color: lime;
+}
+
+#pages p a {
+	background-color: #202020;
+	color: lime;
+}
+
+#pages a img {
+	margin-bottom: 20px;
+}
+
+#pages p a:hover{
+	color: #1E90FF;
+}
+
+.page-section {
+	display: inline-block;
+	margin: 10px;
+	width: 45%;
+	background-color: #202020;
+}
+
+.page-description {
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 11px;
+	max-width: 550px;
+	line-height: 160%;
+}
+
+@media screen and (max-width: 940px) {
+	.section {
+		width: 98%;
+	}
+	
+	.section h2 {
+		font-size: 12px;
+	}
+	
+	#pages {
+		display: block;
+	}
+	
+	.page-section {
+		width: 99%;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.page-description {
+		display: none;
+	}
+	
+	.myImage img {
+		width: 99%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#pages h4 {
+		font-size: 11px;
+	}
+}
+
+/* ------------------------------------------ footer <div> ------------------------------------------ */
+
+.footer {
+    position: ;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #000000;
+}
+
+#footsy {
+	background-color: #000000;
+}
+
+#footsy h3 {
+	text-align: center;
+	background-color: #000000;
+	padding-bottom: 8px;
+	padding-top: 15px;
+	color: #FF8C00;
+}
+
+#footsy p {
+	text-align: center;
+	font-size: 12px;
+	padding-bottom: 15px;
+	background-color: #000000;
+	color: #1E90FF;
+}
+
+/* ---------------------------------------------------------------------------- CONTACTS PAGE ---------------------------------------------------------------------------- */
+
+#form {
+	width: 500px;
+	margin: 50px auto;
+}
+
+#section1{
+	padding: 20px;
+	margin: 20px auto;
+	height: 420px;
+	border: 4px solid #000;
+	background-color: #101010;
+}
+
+#sect_contact {
+	width: 500px;
+	margin: 0px auto;
+}
+
+#sect_contact p {
+	padding-top: 20px;
+	line-height: 1.3em;
+}
+
+#contact_me p a {
+	text-decoration: none;
+	color: lime;
+}
+
+#contact_me {
+	font-size: 14px;
+	color: #1E90FF;
+	margin: 20px auto;
+}
+
+#contact {
+	padding: 10px;
+	font-size: 16px;
+	background-color: #303030;
+}
+
+#contact form {
+	display: inline-block;
+}
+
+#submit_button {
+	height: 40px;
+	width: 80px;
+	font-size: 12px;
+	color: #fff;
+	background-color: #3CB371;
+	border-radius: 4px;
+}
+
+#submit_button:hover {
+	color: #008000;
+	background-color: #B8B8B8;
+}
+
+.row {
+	width: 95%;
+	padding: 5px;
+	background-color: #303030;
+}
+
+.row label {
+	color: lime;
+	background-color: #303030;
+}
+
+.row input{
+	width: 90%;
+	font-size: 12px;
+	padding: 8px;
+	background-color: #B8B8B8;
+}
+
+.row textarea{
+	font-size: 12px;
+}
+
+#message {
+	width: 95%;
+	background-color: #B8B8B8;
+}
+
+.w4-select {
+	background-color: white;
+}
+
+.w4-select option {
+	background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+	#section1 {
+		width: 90%;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	#contact_me {
+		font-size: 12px;
+	}
+	
+	#sect_contact {
+		width: 85%;
+	}
+}
+
+/* ---------------------------------------------------------------------------- ABOUT ME PAGE ---------------------------------------------------------------------------- */
+
+#about_me {
+	font-size: 12px;
+	width: 60%;
+	height: 700px;
+	display: block;
+	margin: 30px auto;
+	padding: 10px;
+	border: 4px solid #000;
+	background-color: #B8B8B8;
+}
+
+#about_me h3, #about_me p, #about_me em, #about_me b{
+	background-color: #B8B8B8;
+}
+
+#about_me em {
+	color: green;
+}
+
+#note {
+	color: blue;
+}
+
+#note u {
+	background-color: #B8B8B8;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="icon" type="image/png" href="images/cdh.png" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="back2FutureTime.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Charles Dustin Hodges</h1>
+			<p>Portfolio and showcase of personal projects<span id="cursor"></span></p>
+		</div>
+		
+		<div class="topNav" id="myTopNav">
+			<a href="index.html">Home</a>
+			<a href="contact.html">Contact</a>
+			<a href="about.html">About</a>
+			<a href="javascript:void(0);" style="font-size: 15px;" class="icon" onclick="myFunction()">&#9776;</a> <!-- &#9776; (hamburger icon) -->
+		</div>
+		
+		<div class="time-clocks">
+			<div id="past">
+				<div class="top-labels">
+					<div class="monthLabel"><p>MONTH</p></div>
+					<div class="dayLabel"><p>DAY</p></div>
+					<div class="yearLabel"><p>YEAR</p></div>
+					<div class="hourLabel"><p>HOUR</p></div>
+					<div class="minuteLabel"><p>MIN</p></div>
+				</div> <!-- top-labels -->
+				<div class="dateTime">
+					<div class="month"><p id="monthSpan">OCT</p></div>
+					<div class="day"><p id="daySpan">26</p></div>
+					<div class="year"><p id="yearSpan">1985</p></div>
+					<div id="wrapper">
+						<div class="am"><p>AM</p></div>
+						<p id="destinationAMLight">.</p>
+						<div class="pm"><p>PM</p></div>
+						<p class="pmLight"></p>
+					</div> <!-- wrapper -->
+					<div class="hours"><p id="hourSpan">01</p></div>
+					<div class="blinkingLights">
+						<p class="blinkSecs">.<br><br>.</p>
+					</div> <!-- blinkingLights -->
+					<div class="minutes"><p id="minuteSpan">21</p></div>
+				</div> <!-- dateTime -->
+				<div class="bottomLabel">
+					<div class="destinationLabel"><p>DESTINATION TIME</p></div>
+				</div> <!-- bottomLabel -->
+			</div> <!-- past -->
+			
+			<div id="present">
+				<div class="top-labels">
+					<div class="monthLabel"><p>MONTH</p></div>
+					<div class="dayLabel"><p>DAY</p></div>
+					<div class="yearLabel"><p>YEAR</p></div>
+					<div class="hourLabel"><p>HOUR</p></div>
+					<div class="minuteLabel"><p>MIN</p></div>
+				</div> <!-- top-labels -->
+				<div class="dateTime">
+					<div class="month"><p id="presentMonthSpan"></p></div>
+					<div class="day"><p id="presentDaySpan"></p></div>
+					<div class="year"><p id="presentYearSpan"></p></div>
+					<div id="wrapper">
+						<div class="am"><p>AM</p></div>
+						<p class="amLight">.</p>
+						<div class="pm"><p>PM</p></div>
+						<p class="pmLight">.</p>
+					</div> <!-- wrapper -->
+					<div class="hours"><p id="presentHourSpan"></p></div>
+					<div class="blinkingLights">
+						<p class="blinkSecs">.<br><br>.</p>
+					</div> <!-- blinkingLights -->
+					<div class="minutes"><p id="presentMinuteSpan"></p></div>
+				</div> <!-- dateTime -->
+				<div class="bottomLabel">
+					<div class="destinationLabel"><p>PRESENT TIME</p></div>
+				</div> <!-- bottomLabel -->
+			</div> <!-- present -->
+			
+			<div id="lastTime">
+				<div class="top-labels">
+					<div class="monthLabel"><p>MONTH</p></div>
+					<div class="dayLabel"><p>DAY</p></div>
+					<div class="yearLabel"><p>YEAR</p></div>
+					<div class="hourLabel"><p>HOUR</p></div>
+					<div class="minuteLabel"><p>MIN</p></div>
+				</div> <!-- top-labels -->
+				<div class="dateTime">
+					<div class="month"><p id="lastMonthSpan">OCT</p></div>
+					<div class="day"><p id="lastDaySpan">26</p></div>
+					<div class="year"><p id="lastYearSpan">1985</p></div>
+					<div id="wrapper">
+						<div class="am"><p>AM</p></div>
+						<p id="destinationAMLight">.</p>
+						<div class="pm"><p>PM</p></div>
+						<p class="pmLight"></p>
+					</div> <!-- wrapper -->
+					<div class="hours"><p id="lastHourSpan">01</p></div>
+					<div class="blinkingLights">
+						<p class="blinkSecs">.<br><br>.</p>
+					</div> <!-- blinkingLights -->
+					<div class="minutes"><p id="lastMinuteSpan">20</p></div>
+				</div> <!-- dateTime -->
+				<div class="bottomLabel">
+					<div class="destinationLabel"><p>LAST TIME DEPARTED</p></div>
+				</div> <!-- bottomLabel -->
+			</div> <!-- lastTime -->
+			
+			<script type="text/javascript">
+				window.onload = presentMonth("presentMonthSpan");
+				window.onload = presentDay("presentDaySpan");
+				window.onload = presentYear("presentYearSpan");
+				window.onload = presentHour("presentHourSpan");
+				window.onload = presentMinute("presentMinuteSpan");
+				window.onload = timeOfDay("amLight", "pmLight");
+			</script>
+		</div> <!-- time-clocks -->
+		
+		<div class="section">
+			<h2>----- Web Pages -----</h2>
+			<div id="pages">
+				<div class="page-section">
+					<h4><a href="http://brainyhandcreations.com/" target="_blank">BrainyHandCreations.com</a></h4>
+					<p class="myImage"><a href="http://brainyhandcreations.com/" target="_blank"><img src="images/bhc.jpg"></a></p>
+					<p class="page-description">
+						BrainyHandCreations.com was created for my small crafting business. It's simple HTML and CSS design
+						allows for users to view images of products made by BHC and images of its customers, as well as allow for direct
+						email contact to the business' personal account using Outlook.
+					</p>
+				</div> <!-- page-section -->
+				
+				<div class="page-section">
+					<h4><a href="http://jennysbarbershop.com/" target="_blank">JennysBarberShop.com</a></h4>
+					<p class="myImage"><a href="http://jennysbarbershop.com/" target="_blank"><img src="images/jennyBS.jpg"></a></p>
+					<p class="page-description">
+						JennysBarberShop.com was constructed as a site for a barber shop business to display services,
+						contact information, reviews, shop hours and other details about the shop for its customers to have easy access to information
+						that they needed. This site was done completely in HTML and CSS.
+					</p>
+				</div> <!-- page-section -->
+			</div> <!-- pages -->
+			
+			<div id="pages">
+				<div class="page-section">
+					<h4><a href="http://asteruniverse.com/" target="_blank">ASTERuniverse.com</a></h4>
+					<p class="myImage"><a href="http://asteruniverse.com/" target="_blank"><img src="images/aster.jpg"></a></p>
+					<p class="page-description">
+						ASTERuniverse.com was made as a personal project based on my interests and hobbies. The site discusses
+						topics on science, engineering, and technology and allows users to interact with the site by creating user accounts,
+						chat, and make comments on the site directly through Facebook. HTML, CSS, PHP and MySQL were used in its creation.
+					</p>
+				</div> <!-- page-section -->
+				
+				<div class="page-section">
+					<h4><a href="http://agentjennyhodges.com/" target="_blank">AgentJennyHodges.com</a></h4>
+					<p class="myImage"><a href="http://agentjennyhodges.com/" target="_blank"><img src="images/jennyRE.jpg"></a></p>
+					<p class="page-description">
+						AgentJennyHodges.com was constructed as a real estate agent site to allow for contact information, direct link to the companies site for
+						property search and information, use of a calendar and other details about the agent and business. This site was quickly and easily
+						made by the use of WordPress for its creation.
+					</p>
+				</div> <!-- page-section -->
+			</div> <!-- pages -->
+		</div> <!-- section -->
+		
+		<div class="section">
+			<h2>----- GitHub Projects -----</h2>
+			<div id="github">
+				<p class="page-section">
+					You can find code for the above websites and more at my GitHub account. Be aware that the code on the GitHub account is not up to date and
+					does not reflect exactly what is actually shown on the websites. Each website is updated regularly, however the code on GitHub is not and
+					honestly probably never will be.
+				</p>
+				<p id="github-section">At my GitHub account you can find code written in HTML, CSS, PHP and Python.</p>
+				
+				<h4><a href="https://github.com/physicsCat1983" target="_blank">===>>> GitHub link <<<===</a></h4>
+				
+				<!-- iframe for Python PowerPoint from iCloud -->
+				<h5>PowerPoint Presentation: Python Tkinter Restaurant Menu</h5>
+				<iframe src='https://onedrive.live.com/embed?cid=22DFE9735A52E888&resid=22DFE9735A52E888%21439&authkey=AIGBLcDaQ6ixHV8&em=2&wdAr=1.3333333333333333' width='350px' height='286px' frameborder='0'>
+					This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.
+				</iframe>
+				
+				<h4><a href="https://github.com/physicsCat1983" target="_blank">===>>> GitHub link <<<===</a></h4>
+			</div>
+		</div>
+		
+		<div class="section">
+			<h2>----- JSFiddle Projects -----</h2>
+			<div id="jsfiddle">
+				<h4><a href="https://jsfiddle.net/user/physicsCat/fiddles/" target="_blank">===>>> Public Fiddles <<<===</a></h4>
+				<div class="page-section">
+					<!-- <iframe width="50%" height="450px" src="https://jsfiddle.net/physicsCat/rpjkyqq2/" align="middle" volume="0"></iframe> -->
+					<p class="myImage"><a href="https://jsfiddle.net/physicsCat/gv6thwms/" target="_blank"><img src="images/botBattle.jpg"></a></p>
+					<p>JSFiddle link: <a href="https://jsfiddle.net/physicsCat/gv6thwms/" target="_blank">Bot Battle!</a></p>
+				</div> <!-- page-section -->
+				
+				<div class="page-section">
+					<!-- <iframe width="50%" height="450px" src="https://jsfiddle.net/physicsCat/ygn7v6ys/" align="middle" volume="0"></iframe> -->
+					<p class="myImage"><a href="https://jsfiddle.net/physicsCat/f06qwkpr/" target="_blank"><img src="images/stupidAI.jpg"></a></p>
+					<p>JSFiddle link: <a href="https://jsfiddle.net/physicsCat/f06qwkpr/" target="_blank">Stupid A.I.</a></p>
+				</div> <!-- page-section -->
+				
+				<div class="page-section">
+					<!-- <iframe width="50%" height="450px" src="https://jsfiddle.net/physicsCat/ygn7v6ys/" align="middle" volume="0"></iframe> -->
+					<p class="myImage"><a href="https://jsfiddle.net/physicsCat/66au2suw/" target="_blank"><img src="images/knightsDemons.jpg"></a></p>
+					<p>JSFiddle link: <a href="https://jsfiddle.net/physicsCat/66au2suw/" target="_blank">Knights &amp; Demons</a></p>
+				</div> <!-- page-section -->
+			</div> <!-- jsfiddle -->
+		</div> <!-- jsfiddle-section -->
+		
+		<div class="footer">
+			<div id="footsy">
+				<h3>Charles Dustin Hodges</h3>
+				<p>Last Updated: 08/16/2017</p>
+			</div>
+		</div>
+		
+		<script src="mySite.js"></script>
+	</body>
+</html>
