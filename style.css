@@ -723,7 +723,7 @@ body {
 	background-color: #000000;
 }
 
-#footsy h3 {
+#footsy h4 {
 	text-align: center;
 	background-color: #000000;
 	padding-bottom: 8px;
@@ -869,6 +869,14 @@ body {
 
 #about_me em {
 	color: green;
+}
+
+@media screen and (max-width: 600px) {
+	#about_me {
+		font-size: 10px;
+		width: 60%;
+		height: 100%;
+	}
 }
 
 #note {
