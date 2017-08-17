@@ -5,10 +5,6 @@
 	background-color: #303030;
 }
 
-body {
-	height: 100%;
-}
-
 @font-face {
 	font-family: 'emulogic';
 	src: url("fonts/emulogic.ttf");
@@ -50,13 +46,22 @@ body {
 	white-space: nowrap;	/* Do not have text wrap */
 }
 
+#line-break {
+	background-color: #000;
+}
+
 @media screen and (max-width: 600px) {
 	#header p {
-		max-width: 99%;
+		max-width: 95%;
 		font-size: 0.5em;
 		text-align: center;
 		-webkit-animation: type 4s steps(43);
 		animation: type 4s steps(43);
+	}
+	
+	#line-break {
+		display: block;
+		background-color: #000;
 	}
 }
 
@@ -355,14 +360,14 @@ body {
 
 	.time-clocks {
 		height: 240px;
-		width: 400px;
+		width: 100%;
 		display: block;
 		margin: 0 auto;
 		padding-bottom: 20px;
 	}
 	
 	#past, #present, #lastTime {
-		margin-left: 30px;
+		margin-left: 8px;
 	}
 }
 
@@ -447,6 +452,20 @@ body {
 	background-color: #202020;
 }
 
+.section h2 span {
+	background-color: #202020;
+}
+
+@media screen and (max-width: 600px) {
+	.section h2 {
+		text-decoration: underline lime;
+	}
+
+	.section h2 span {
+		display: none;
+	}
+}
+
 /* -------------------------------------- .myImage ------------------------------------------- */
 
 .myImage img {
@@ -496,6 +515,10 @@ body {
 	margin: 50px auto;
 }
 
+#github h4 a span {
+	background-color: #202020;
+}
+
 #github p a {
 	background-color: #202020;
 	color: lime;
@@ -527,12 +550,24 @@ body {
 		font-size: 12px;
 	}
 	
+	#github h4 a {
+		text-decoration: underline wavy #FF8C00;
+	}
+	
+	#github h4 a span {
+		display: none;
+	}
+	
 	#github p {
 		font-size: 11px;
 	}
 	
 	#github iframe {
 		width: 100%;
+	}
+	
+	#github #github-section {
+		width: 85%;
 	}
 }
 
@@ -546,6 +581,10 @@ body {
 #jsfiddle h4 {
 	margin-top: 40px;
 	margin-bottom: 20px;
+}
+
+#jsfiddle h4 span {
+	background-color: #202020;
 }
 
 #jsfiddle a {
@@ -599,6 +638,14 @@ body {
 	
 	#jsfiddle a {
 		font-size: 11px;
+	}
+	
+	#jsfiddle h4 a {
+		text-decoration: underline wavy #FF8C00;
+	}
+	
+	#jsfiddle h4 a span {
+		display: none;
 	}
 	
 	#botBattle img {
@@ -712,9 +759,6 @@ body {
 /* ------------------------------------------ footer <div> ------------------------------------------ */
 
 .footer {
-    position: ;
-	bottom: 0;
-	left: 0;
 	width: 100%;
 	background-color: #000000;
 }
@@ -737,6 +781,16 @@ body {
 	padding-bottom: 15px;
 	background-color: #000000;
 	color: #1E90FF;
+}
+
+@media screen and (max-width: 600px) {
+	#footsy h4 {
+		font-size: 12px;
+	}
+	
+	#footsy p {
+		font-size: 10px;
+	}
 }
 
 /* ---------------------------------------------------------------------------- CONTACTS PAGE ---------------------------------------------------------------------------- */
@@ -835,18 +889,45 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+	#form {
+		width: 100%;
+		padding: 0;
+	}
+	
 	#section1 {
 		width: 90%;
 		display: block;
 		margin: 0 auto;
+		padding: 10px;
+	}
+	
+	#contact {
+		width: 92%;
 	}
 	
 	#contact_me {
 		font-size: 12px;
 	}
 	
+	#contact #contact_form {
+		width: 100%;
+	}
+	
 	#sect_contact {
 		width: 85%;
+	}
+	
+	.row input {
+		width: 85%;
+	}
+	
+	#submit_button {
+		margin-top: 5px;
+	}
+	
+	.w4-select{
+		width: 90%;
+		margin-top: 8px;
 	}
 }
 
