@@ -255,7 +255,7 @@
 	color: #808080;
 	background-color: #580000;
 	margin-left: 2px;
-	margin-bottom: -3px;
+	margin-bottom: -4px;
 	padding: 0px 1px;
 }
 
@@ -267,11 +267,10 @@
 	color: #FFFF66;
 	text-align: center;
 	margin-left: 2px;
-	margin-bottom: .5px;
 }
 
 .pm {
-	background-color: #282828;
+	margin-bottom: -1px;
 }
 
 .pm p {
@@ -282,7 +281,7 @@
 	border: 1px solid #000;
 	color: #808080;
 	background-color: #580000;
-	margin-top: 8px;
+	margin-top: 6px;
 	margin-left: 2px;
 	margin-bottom: -5px;
 	padding: 0px 1px;
@@ -296,7 +295,7 @@
 	color: #FFFF66;
 	text-align: center;
 	margin-left: 2px;
-	margin-top: -1.5px;
+	margin-top: 1px;
 }
 
 .blinkingLights{
