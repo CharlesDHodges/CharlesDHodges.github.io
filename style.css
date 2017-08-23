@@ -797,6 +797,10 @@
 	box-shadow: 15px 15px 10px #000000;
 }
 
+.page-section #research  a {
+	display: none;
+}
+
 .page-section #research  img {
 	width: 90%;
 	height: 90%;
@@ -836,6 +840,21 @@
 	.page-section #research  object {
 		width: 90%;
 		height: 90%;
+	}
+	
+	.page-section #research  a {
+		text-decoration: underline #FF00FF;
+		color: #FF00FF;
+		font-size: 11px;
+		text-align: center;
+		display: block;
+		margin: 20px auto;
+		background-color: #202020;
+	}
+	
+	.page-section #research  a:hover {
+		text-decoration: underline #00FF7F;
+		color: #00FF7F;
 	}
 	
 	.page-section #research  img {
