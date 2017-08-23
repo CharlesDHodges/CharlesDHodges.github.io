@@ -255,7 +255,7 @@
 	color: #808080;
 	background-color: #580000;
 	margin-left: 2px;
-	margin-bottom: -4px;
+	margin-bottom: -3px;
 	padding: 0px 1px;
 }
 
@@ -267,10 +267,11 @@
 	color: #FFFF66;
 	text-align: center;
 	margin-left: 2px;
+	margin-bottom: -5px;
 }
 
 .pm {
-	margin-bottom: -1px;
+	background-color: #282828;
 }
 
 .pm p {
@@ -281,7 +282,7 @@
 	border: 1px solid #000;
 	color: #808080;
 	background-color: #580000;
-	margin-top: 6px;
+	margin-top: 8px;
 	margin-left: 2px;
 	margin-bottom: -5px;
 	padding: 0px 1px;
@@ -295,7 +296,7 @@
 	color: #FFFF66;
 	text-align: center;
 	margin-left: 2px;
-	margin-top: 1px;
+	margin-top: -1.5px;
 }
 
 .blinkingLights{
@@ -453,6 +454,17 @@
 
 .section h2 span {
 	background-color: #202020;
+}
+
+.bottom  h2 a {
+	color: #FFFF00;
+	text-decoration: underline #FFFF00;
+	background-color: #202020;
+}
+
+.bottom  h2 a:hover {
+	color: #FF1493;
+	text-decoration: underline #FF1493;
 }
 
 @media screen and (max-width: 600px) {
@@ -752,6 +764,84 @@
 @media screen and (max-width: 600px) {
 	#pages h4 {
 		font-size: 11px;
+	}
+}
+
+/* ------------------------------------------ Research ------------------------------------------ */
+
+.page-section{
+	display: block;
+	margin: 30px auto;
+}
+
+.page-section #research {
+	display: block;
+	margin: 0px auto;
+	background-color: #202020;
+}
+
+.page-section #research h3 {
+	background-color: #202020;
+	text-align: center;
+	color: #FF8C00;
+}
+
+.page-section #research  object {
+	width: 90%;
+	height: 600px;
+	display: block;
+	margin: 40px auto;
+	box-shadow: 15px 15px 10px #000000;
+}
+
+.page-section #research  img {
+	width: 90%;
+	height: 90%;
+	display: block;
+	margin: 30px auto;
+	box-shadow: 15px 15px 10px #000000;
+}
+
+.page-section #research  video{
+	width: 90%;
+	display: block;
+	margin: 30px auto;
+	box-shadow: 15px 15px 10px #000000;
+}
+
+.top  h2 a {
+	color: #FFFF00;
+	text-decoration: underline #FFFF00;
+	background-color: #202020;
+}
+
+.top  h2 a:hover {
+	color: #FF1493;
+	text-decoration: underline #FF1493;
+}
+
+@media screen and (max-width: 600px) {
+	.page-section #research {
+		width: 99%;
+		margin: 0px auto;
+	}
+	
+	.page-section #research h3 {
+		font-size: 10px;
+	}
+	
+	.page-section #research  object {
+		width: 90%;
+		height: 90%;
+	}
+	
+	.page-section #research  img {
+		width: 90%;
+		height: 90%;
+	}
+
+	.page-section #research  video{
+		width: 90%;
 	}
 }
 
